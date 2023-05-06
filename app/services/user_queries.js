@@ -52,6 +52,7 @@ userQueries.userData = async () => {
         } else {
           res(rows);
         }
+        console.log(rows);
       });
     });
     return rows;
