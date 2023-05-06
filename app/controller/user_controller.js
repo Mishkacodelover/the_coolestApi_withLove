@@ -1,6 +1,6 @@
-import dao from "../services/dao.js";
-import { SignJWT, jwtVerify } from "jose";
+import { SignJWT } from "jose";
 import md5 from "md5";
+import dao from "../services/dao.js";
 
 const controller = {};
 

@@ -5,7 +5,7 @@ const userQueries = {};
 
 userQueries.addUser = async (userData) => {
   try {
-    const sql = `INSERT INTO user (nombre,email,password,padre,tipo,numserie) VALUES (?, ?, ?,?,?,?)`;
+    const sql = `INSERT INTO user (nombre,email,password,padre,tipo,numserie) VALUES (?, ?, ?, ?, ?, ?)`;
     const passwordHash = md5(userData.password);
     db.run(sql, [
       userData.nombre,
