@@ -1,4 +1,4 @@
-# The Coolest API with Love <image src="./fun.jpeg" alt="image">
+# The Coolest API with Love <image src="./funcode.jpeg" alt="image">
 
 This project is a Node.js API that uses SQLite as a database and Swagger for path documentation.
 
