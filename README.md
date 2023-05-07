@@ -2,6 +2,8 @@
 
 This project is a Node.js API that uses SQLite as a database and Swagger for path documentation.
 
+![Images for technologies used](./logos.jpeg)
+
 ## Structure
 
 The main application index.js file is located in app folder,this file link to user router file that is in routes folder. The routes are passed to the controller file, then to the dao file and finally to a queries file.
@@ -38,22 +40,10 @@ If you don't want your server to stop, change in our package.json file the scrip
 
 3. Database:
 
-```sh
-npm run db-init
-
-```
+If you have installed the sqlite viewer extension in visualcode you can interactively view the user table in the "database.sqlite" file.
+To interact with the end-points and the database you can try the routes in postman or similar application and also in swagger (see specifications).
 
 IN the case you wish To create a new table:
-
-- Create a new 'table.js' file. You can copy the same code that is in the 'table_user.js' file, just change the table name and the table fields.
-- Then run the following commands:
-
-```sh
-cd the_coolestApi_withLove
-node table.js
-```
-
-- These commands automatically create the new table.
 
 ## Usage
 
@@ -104,11 +94,3 @@ docker run -it -p 3000:8000 the_coolestapi
 ## Contribute
 
 If you want to contribute to this project, you can create a Pull Request on GitHub. Be sure to include a clear and detailed description of your proposed changes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-```
-
-```
