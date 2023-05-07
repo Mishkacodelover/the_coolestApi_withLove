@@ -1,13 +1,13 @@
 FROM node:20
 
-WORKDIR the_coolestapi_withlove/app
+
+WORKDIR /src
 
 COPY package*.json ./
-COPY . .
-
 RUN npm install
 
-EXPOSE 8000
+
+COPY . .
 
 CMD [ "npm", "start" ]
 

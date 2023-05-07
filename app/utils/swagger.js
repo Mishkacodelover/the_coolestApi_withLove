@@ -13,15 +13,16 @@ const swaggerSpec = {
     },
     components: {
       securitySchemes: {
-        bearerAuth: {
+        basicAuth: {
           type: "http",
           scheme: "bearer",
           bearerFormat: "JWT",
           description: "Enter 'Bearer' followed by a space and the JWT token",
+          in: "header",
         },
       },
       security: {
-        bearerAuth: [],
+        basicAuth: [],
       },
     },
 

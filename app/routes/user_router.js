@@ -162,19 +162,10 @@ userRouter.post("/login", validateLogin, userController.login);
 
 /**
  * @swagger
- *   components:
- *   securitySchemes:
- *     bearerAuth:
- *       type: http
- *       scheme: bearer
- *       bearerFormat: JWT
- *   security:
- *     - bearerAuth: []
- *
  * /getData:
  *   get:
  *     security:
- *     - bearerAuth: []
+ *     - basicAuth: []
  *
  *     summary: Get user data.
  *     tags: [getData]

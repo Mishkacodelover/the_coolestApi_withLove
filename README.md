@@ -1,23 +1,23 @@
 # The Coolest API with Love
 
-Este proyecto es una API en Node.js que utiliza SQLite como base de datos y Swagger para la documentación de las rutas.
+This project is a Node.js API that uses SQLite as a database and Swagger for path documentation.
 
-## Estructura
+## Structure
 
-El archivo principal de la aplicación se encuentra en index.js, mientras que el control de las rutas se encuentra en la carpeta routes. Las rutas pasan al archivo controller, depués al archivo dao y por último a un archivo de queries.
+The main application index.js file is located in app folder,this file link to user router file that is in routes folder. The routes are passed to the controller file, then to the dao file and finally to a queries file.
 
-## Requisitos previos
+## Requirements
 
-Antes de poder utilizar esta API, necesitarás instalar los siguientes paquetes en tu equipo:
+Before you can use this API, you will need to install the following packages on your computer:
 
 Node.js
-Extensión visual code SQLite Viewer
+SQLite Viewer visual code extension
 
-## Instalación
+## Installation
 
-Para instalar la API, sigue los siguientes pasos:
+To install the API, follow the steps below:
 
-1. Clona el repositorio en tu equipo:
+1. Clone the repository on your machine:
 
 ```sh
 
@@ -25,7 +25,7 @@ git clone https://github.com/Mishkacodelover/the_coolestApi_withLove.git
 
 ```
 
-2. Instala las dependencias:
+2. Install the dependencies:
 
 ```sh
 cd the_coolestApi_withLove
@@ -33,28 +33,31 @@ npm install
 
 ```
 
-3. Base de datos:
+If you don't want your server to stop, change in our package.json file the script "start": "node app/index.js " to
+"start": "nodemon app/index.js "
+
+3. Database:
 
 ```sh
 npm run db-init
 
 ```
 
-Para crear una nueva tabla:
+IN the case you wish To create a new table:
 
-- Crear un nuevo archivo 'table.js'. Puede copiar el mismo código que hay en el archivo 'table_user.js' , tan solo tiene que cambiar el nombre de la tabla y los campos de la tabla.
-- Después ejecute los siguientes comandos:
+- Create a new 'table.js' file. You can copy the same code that is in the 'table_user.js' file, just change the table name and the table fields.
+- Then run the following commands:
 
 ```sh
 cd the_coolestApi_withLove
 node table.js
 ```
 
-- Estos comandos crean automáticamente la nueva tabla.
+- These commands automatically create the new table.
 
-## Uso
+## Usage
 
-Para iniciar la API, utiliza el siguiente comando:
+To start the API, use the following command:
 
 ```sh
 cd app
@@ -63,20 +66,49 @@ npm start
 
 ## Swagger
 
-Para acceder a la documentación de la API en tu navegador con Swagger, utiliza la siguiente dirección:
+To access the API documentation in your browser with Swagger, use the following address:
 
 ```sh
 
-http://localhost:3000/api-doc/
+http://localhost:8000/api-doc/
 
 ```
 
 ## Docker
 
-## Contribución
+To start the api with Docker the steps to follow are:
 
-Si quieres contribuir a este proyecto, puedes crear un Pull Request en GitHub. Asegúrate de incluir una descripción clara y detallada de los cambios que propones.
+1. Have docker installed on your computer:
+2. Command to build our docker container:
 
-## Licencia
+```sh
+cd the_coolestApi_withLove
+docker build -t the_coolestapi .
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+```
+
+3. Command to list our containers and verify that it has been created successfully:
+
+```sh
+docker images
+
+```
+
+4. Command to run our container:
+
+```sh
+docker run -it -p 3000:8000 the_coolestapi
+
+```
+
+## Contribute
+
+If you want to contribute to this project, you can create a Pull Request on GitHub. Be sure to include a clear and detailed description of your proposed changes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+```
+
+```

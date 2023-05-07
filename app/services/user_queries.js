@@ -58,8 +58,6 @@ userQueries.userData = async () => {
     return rows;
   } catch (e) {
     throw new Error(e);
-  } finally {
-    db.close();
   }
 };
 
