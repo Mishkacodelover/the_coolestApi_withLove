@@ -165,11 +165,12 @@ userRouter.post("/login", validateLogin, userController.login);
  * /getData:
  *   get:
  *     security:
- *     - basicAuth: []
- *
+ *       - bearerAuth: []
+ *       - in: header
  *     summary: Get user data.
  *     tags: [getData]
- *     description: Retrieve all user data from the database.
+ *     description: Retrieve all user data from the database ordered by "padre" field
+ *
  *     responses:
  *       200:
  *         description: A list of user data objects.

@@ -69,7 +69,7 @@ http://localhost:8000/api-doc/
 To start the api with Docker the steps to follow are:
 
 1. Have docker installed on your computer:
-2. Command to build our docker container:
+2. Command to build the docker container:
 
 ```sh
 cd the_coolestApi_withLove
@@ -77,14 +77,14 @@ docker build -t the_coolestapi .
 
 ```
 
-3. Command to list our containers and verify that it has been created successfully:
+3. Command to list the containers and verify that it has been created successfully:
 
 ```sh
 docker images
 
 ```
 
-4. Command to run our container:
+4. Command to run the container:
 
 ```sh
 docker run -it -p 3000:8000 the_coolestapi
