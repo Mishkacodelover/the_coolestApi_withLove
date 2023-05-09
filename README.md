@@ -35,9 +35,6 @@ npm install
 
 ```
 
-If you don't want your server to stop, change in our package.json file the script "start": "node app/index.js " to
-"start": "nodemon app/index.js "
-
 3. Database:
 
 If you have installed the sqlite viewer extension in visualcode you can interactively view the user table in the "database.sqlite" file.
